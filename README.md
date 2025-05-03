@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 ```json
 {
-    "api_key": "sk_h_your_actual_api_key_here"
+    "api_key": "your_api_key_here"
 }
 ```
 
