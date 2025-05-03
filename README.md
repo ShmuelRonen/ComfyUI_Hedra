@@ -31,6 +31,9 @@ Character-3 introduces several advanced features:
 - **Advanced Emotion Mapping**: More nuanced facial expressions that match the audio's emotional content
 - **Scene Coherence**: Maintains consistency between character movements and environmental elements
 
+  ![image](https://github.com/user-attachments/assets/348070b6-81ec-4815-beec-7764a6e82d70)
+
+
 ## Installation
 
 1. Clone this repository into your ComfyUI custom nodes folder:
