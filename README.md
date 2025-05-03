@@ -2,10 +2,13 @@
 
 A custom node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that integrates with [Hedra](https://www.hedra.com)'s Character-3 API to generate talking avatar videos from images and audio.
 
-![image](https://github.com/user-attachments/assets/f4939561-4813-4150-a32b-f7c18984d0bb)
+![image](https://github.com/user-attachments/assets/fcfd5b5a-a910-4859-9e61-8affce0c788f)
 
 
-https://github.com/user-attachments/assets/e1639526-248f-4718-bec3-36a3cdc736b9
+
+https://github.com/user-attachments/assets/13150d25-df1f-4bb6-8f0c-ff5ca599575e
+
+
 
 
 
