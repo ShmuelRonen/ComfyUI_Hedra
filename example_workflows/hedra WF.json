@@ -1,0 +1,296 @@
+{
+  "id": "f67f1bc9-3f2e-4bcf-aac7-45b8810b19cf",
+  "revision": 0,
+  "last_node_id": 46,
+  "last_link_id": 68,
+  "nodes": [
+    {
+      "id": 22,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        27399.794921875,
+        -571.4589233398438
+      ],
+      "size": [
+        775.6423950195312,
+        1103.642333984375
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 64
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4c7858ddd5126f7293dc3c9f6e0fc4c263cde079",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "sonic\\son",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": false,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "son_00004-audio.mp4",
+            "subfolder": "sonic",
+            "type": "temp",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "son_00004.png",
+            "fullpath": "C:\\Users\\derec\\AppData\\Local\\Temp\\latentsync_aa101816\\sonic\\son_00004-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 35,
+      "type": "LoadAudio",
+      "pos": [
+        26289.40234375,
+        -90.67850494384766
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "woman whisper.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 25,
+      "type": "LoadImage",
+      "pos": [
+        26298.5234375,
+        -536.4118041992188
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            62
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "art_00164_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "HedraImageToVideo",
+      "pos": [
+        26715.466796875,
+        -348.1601867675781
+      ],
+      "size": [
+        400,
+        244
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 62
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            63
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            64
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "video_url",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HedraImageToVideo"
+      },
+      "widgets_values": [
+        "a person talk wile looking at the camera in the shore",
+        "16:9",
+        "720p",
+        false,
+        true
+      ]
+    }
+  ],
+  "links": [
+    [
+      61,
+      35,
+      0,
+      45,
+      1,
+      "AUDIO"
+    ],
+    [
+      62,
+      25,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      63,
+      45,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      45,
+      1,
+      22,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "HEDRA",
+      "bounding": [
+        26262.6015625,
+        -653.9117431640625,
+        1977.679443359375,
+        1210.95068359375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000011,
+      "offset": [
+        -25700.17902339633,
+        748.5414168897195
+      ]
+    },
+    "frontendVersion": "1.17.11",
+    "node_versions": {
+      "comfy-core": "0.3.14",
+      "ComfyUI_Sonic": "f6d64d732726ee3c28e9ea91df27ff88eab0d945",
+      "mikey_nodes": "637bc18f8e18cc662a8411efbc7013adc7845ae7",
+      "comfyui-various": "36454f91606bbff4fc36d90234981ca4a47e2695",
+      "ComfyUI-VideoHelperSuite": "cad87a17a3ff5e03c26cf55e4dc90397b5642503",
+      "ComfyUI-Easy-Use": "3c37489c0ae0492b54a01320bedb3add82cd8370"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
