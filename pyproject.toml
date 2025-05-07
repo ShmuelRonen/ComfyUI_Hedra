@@ -1,0 +1,15 @@
+[project]
+name = "hedra"
+description = "A custom node for ComfyUI that integrates with [a/Hedra](https://www.hedra.com/)'s Character-3 API to generate talking avatar videos from images and audio."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["scipy>=1.10.0", "opencv-python>=4.8.0"]
+
+[project.urls]
+Repository = "https://github.com/ShmuelRonen/ComfyUI_Hedra"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_Hedra"
+Icon = ""
